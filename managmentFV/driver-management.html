@@ -1,0 +1,1478 @@
+<!-- Abrar Alharbi -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+
+Driver Management | Transportation Management System
+
+</title>
+
+<link href="css/style.css"
+      rel="stylesheet"/>
+
+</head>
+
+<body>
+
+<!-- ==========================================
+                    HEADER
+========================================== -->
+
+<header class="app-header">
+
+    <!-- Top Header -->
+
+    <div class="header-top">
+
+        <div class="container header-top-inner">
+
+            <span>
+
+                King Fahd Armed Forces Hospital in Jeddah
+
+            </span>
+
+            <span>
+
+                Transportation Management System
+
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- Main Header -->
+
+    <div class="container header-main-inner">
+
+        <!-- Brand -->
+
+        <div class="brand">
+
+            <div class="brand-mark">
+
+                <img src="images/hospital-logo.png"
+                     alt="Hospital Logo"
+                     style="width:45px;height:45px;border-radius:12px;">
+
+            </div>
+
+            <div>
+
+                <h1 class="brand-title">
+
+                    Transportation Management
+
+                </h1>
+
+                <p class="brand-subtitle">
+
+                    Transportation Services Platform
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+
+        <nav class="main-nav">
+
+            <a href="trip-management.html"
+               class="nav-link">
+
+                Trip Management
+
+            </a>
+
+            <a href="vehicle-management.html"
+               class="nav-link">
+
+                Vehicle Management
+
+            </a>
+
+            <a href="driver-management.html"
+               class="nav-link active">
+
+                Driver Management
+
+            </a>
+
+            <a href="employee-management.html"
+               class="nav-link">
+
+                Employee Management
+
+            </a>
+
+            <a href="reports.html"
+               class="nav-link">
+
+                Reports
+
+            </a>
+
+        </nav>
+
+        <!-- Header Actions -->
+
+        <div class="header-actions">
+
+            <div class="profile-dropdown">
+
+                <button class="manager-chip"
+                        id="profileBtn">
+
+                    <span>A</span>
+
+                    <div>
+
+                        <strong>
+
+                            Abrar Alharbi
+
+                        </strong>
+
+                    </div>
+
+                </button>
+
+                <div class="profile-menu"
+                     id="profileMenu">
+
+                    <button class="menu-item"
+                            id="logoutBtn">
+
+                        Sign Out
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ==========================================
+                    MAIN
+========================================== -->
+
+<main>
+
+<section class="section">
+
+<div class="container">
+
+<div class="card">
+
+<div class="card-header">
+
+<div>
+
+<h2 class="card-title">
+
+Driver Management
+
+</h2>
+
+<p class="section-subtitle">
+
+Create and manage transportation drivers.
+
+</p>
+
+</div>
+
+<button class="btn btn-primary"
+        id="createDriverBtn">
+
++ Create New Driver
+
+</button>
+
+</div>
+
+<div class="card-body">
+
+<div class="table-responsive">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Driver Name</th>
+
+<th>Phone Number</th>
+
+<th>License Number</th>
+
+<th>License Expiry Date</th>
+
+<th>License Info</th>
+
+<th>Driver Status</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="driverTableBody">
+
+<tr>
+
+<td>
+
+<div class="data-title">
+
+Ahmed Ali
+
+</div>
+
+</td>
+
+<td>
+
+0501234567
+
+</td>
+
+<td>
+
+DL-10245
+
+</td>
+
+<td>
+
+2027-12-15
+
+</td>
+
+<td>
+
+<button
+class="btn btn-secondary view-license-btn"
+data-type="Private"
+data-authority="Jeddah Traffic Department">
+
+View
+
+</button>
+
+</td>
+
+<td>
+
+Available
+
+</td>
+
+<td>
+
+<button class="btn btn-secondary edit-btn">
+
+Edit
+
+</button>
+
+<button class="btn btn-danger delete-btn">
+
+Delete
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<div class="data-title">
+
+Mohammed Hassan
+
+</div>
+
+</td>
+
+<td>
+
+0509876543
+
+</td>
+
+<td>
+
+DL-20481
+
+</td>
+
+<td>
+
+2026-08-09
+
+</td>
+
+<td>
+
+<button
+class="btn btn-secondary view-license-btn"
+data-type="Heavy Vehicle"
+data-authority="Jeddah Traffic Department">
+
+View
+
+</button>
+
+</td>
+
+<td>
+
+Available
+
+</td>
+
+<td>
+
+<button class="btn btn-secondary edit-btn">
+
+Edit
+
+</button>
+
+<button class="btn btn-danger delete-btn">
+
+Delete
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<div class="data-title">
+
+Fahad Abdullah
+
+</div>
+
+</td>
+
+<td>
+
+0557654321
+
+</td>
+
+<td>
+
+DL-30572
+
+</td>
+
+<td>
+
+2027-04-21
+
+</td>
+
+<td>
+
+<button
+class="btn btn-secondary view-license-btn"
+data-type="Bus"
+data-authority="Jeddah Traffic Department">
+
+View
+
+</button>
+
+</td>
+
+<td>
+
+Off Duty
+
+</td>
+
+<td>
+
+<button class="btn btn-secondary edit-btn">
+
+Edit
+
+</button>
+
+<button class="btn btn-danger delete-btn">
+
+Delete
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+<!-- ==========================================
+        CREATE / EDIT DRIVER MODAL
+========================================== -->
+
+<div class="modal" id="driverModal">
+
+    <div class="modal-dialog">
+
+        <div class="modal-header">
+
+            <h3 class="modal-title" id="driverModalTitle">
+
+                Create New Driver
+
+            </h3>
+
+            <button class="close-btn"
+                    id="closeDriverModal">
+
+                ×
+
+            </button>
+
+        </div>
+
+        <div class="modal-body">
+
+            <div class="form-grid">
+
+                <!-- Driver Name -->
+
+                <div class="form-group">
+
+                    <label class="label">
+
+                        Driver Name
+
+                        <span class="required">*</span>
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="input"
+                        id="driverName"
+                        placeholder="Enter driver name">
+
+                </div>
+
+                <!-- Phone Number -->
+
+                <div class="form-group">
+
+                    <label class="label">
+
+                        Phone Number
+
+                        <span class="required">*</span>
+
+                    </label>
+
+                    <input
+                        type="tel"
+                        class="input"
+                        id="phoneNumber"
+                        placeholder="05XXXXXXXX">
+
+                </div>
+
+                <!-- License Number -->
+
+                <div class="form-group">
+
+                    <label class="label">
+
+                        License Number
+
+                        <span class="required">*</span>
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="input"
+                        id="licenseNumber"
+                        placeholder="Enter license number">
+
+                </div>
+
+                <!-- License Expiry -->
+
+                <div class="form-group">
+
+                    <label class="label">
+
+                        License Expiry Date
+
+                        <span class="required">*</span>
+
+                    </label>
+
+                    <input
+                        type="date"
+                        class="input"
+                        id="licenseExpiry">
+
+                </div>
+
+                <!-- License Type -->
+
+                <div class="form-group">
+
+                    <label class="label">
+
+                        License Type
+
+                        <span class="required">*</span>
+
+                    </label>
+
+                    <select
+                        class="select"
+                        id="licenseType">
+
+                        <option value="">
+                            Select License Type
+                        </option>
+
+                        <option value="Private">
+                            Private
+                        </option>
+
+                        <option value="Bus">
+                            Bus
+                        </option>
+
+                        <option value="Heavy Vehicle">
+                            Heavy Vehicle
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- Issuing Authority -->
+
+                <div class="form-group">
+
+                    <label class="label">
+
+                        Issuing Authority
+
+                        <span class="required">*</span>
+
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="input"
+                        id="issuingAuthority"
+                        placeholder="Enter issuing authority">
+
+                </div>
+
+                <!-- License Attachment -->
+
+                <div class="form-group full">
+
+                    <label class="label">
+
+                        License Attachment
+
+                    </label>
+
+                    <input
+                        type="file"
+                        class="input"
+                        id="licenseAttachment"
+                        accept=".pdf,image/*">
+
+                </div>
+
+                <!-- Driver Status -->
+
+                <div class="form-group full">
+
+                    <label class="label">
+
+                        Driver Status
+
+                        <span class="required">*</span>
+
+                    </label>
+
+                    <select
+                        class="select"
+                        id="driverStatus">
+
+                        <option value="">
+                            Select Status
+                        </option>
+
+                        <option value="Available">
+                            Available
+                        </option>
+
+                        <option value="Off Duty">
+                            Off Duty
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+
+            <button
+                class="btn btn-primary"
+                id="saveDriverBtn">
+
+                Save Driver
+
+            </button>
+
+            <button
+                class="btn btn-secondary"
+                id="cancelDriverBtn">
+
+                Cancel
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+            LICENSE INFORMATION MODAL
+========================================== -->
+
+<div class="modal" id="licenseModal">
+
+    <div class="modal-dialog">
+
+        <div class="modal-header">
+
+            <h3>
+
+                License Information
+
+            </h3>
+
+            <button class="close-btn"
+                    id="closeLicenseModal">
+
+                ×
+
+            </button>
+
+        </div>
+
+        <div class="modal-body">
+
+            <p>
+
+                <strong>Driver Name:</strong>
+
+                <span id="viewDriverName"></span>
+
+            </p>
+
+            <p>
+
+                <strong>Phone Number:</strong>
+
+                <span id="viewPhone"></span>
+
+            </p>
+
+            <p>
+
+                <strong>License Number:</strong>
+
+                <span id="viewLicenseNumber"></span>
+
+            </p>
+
+            <p>
+
+                <strong>Expiry Date:</strong>
+
+                <span id="viewExpiry"></span>
+
+            </p>
+
+            <p>
+
+                <strong>License Type:</strong>
+
+                <span id="viewLicenseType"></span>
+
+            </p>
+
+            <p>
+
+                <strong>Issuing Authority:</strong>
+
+                <span id="viewAuthority"></span>
+
+            </p>
+            <hr>
+
+<p>
+
+    <strong>License Attachment</strong>
+
+</p>
+
+<img
+    id="viewLicenseImage"
+    src=""
+    alt="License Image"
+    style="
+        width:100%;
+        max-height:350px;
+        object-fit:contain;
+        border:1px solid #ddd;
+        border-radius:10px;
+        display:none;
+    ">
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+                    FOOTER
+========================================== -->
+
+<footer class="app-footer">
+
+<div class="container footer-inner">
+
+<div>
+
+<h2 class="footer-title">
+
+Armed Forces Hospital - Jeddah
+
+</h2>
+
+<p class="footer-text">
+
+A sustainable healthy community for Ministry of Defense personnel and their families.
+
+</p>
+
+<h2 class="footer-title"
+style="margin-top:15px;">
+
+Our Mission
+
+</h2>
+
+<p class="footer-text">
+
+Promoting healthy lifestyles and providing integrated preventive and curative healthcare services with professionalism and international quality standards.
+
+</p>
+
+</div>
+
+<div>
+
+<h2 class="footer-title">
+
+Transportation
+
+</h2>
+
+<ul class="footer-list">
+
+<li>Trip Management</li>
+
+<li>Vehicle Management</li>
+
+<li>Driver Management</li>
+
+<li>Employee Management</li>
+
+<li>Reports</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h2 class="footer-title">
+
+Contact Us
+
+</h2>
+
+<ul class="footer-list">
+
+<li>Saudi Arabia - Jeddah</li>
+
+<li>Corniche Road</li>
+
+<li>23311</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<div class="container">
+
+© 2026 Armed Forces Hospital - Jeddah. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- ==========================================
+                MESSAGE BOX
+========================================== -->
+
+<div id="messageBox"
+     class="message-box">
+
+</div>
+
+<script>
+    // ==========================================
+// MESSAGE BOX
+// ==========================================
+
+function showMessage(message, type = "success") {
+
+    const box = document.getElementById("messageBox");
+
+    box.className = "message-box";
+
+    if (type === "error") {
+
+        box.classList.add("error");
+
+    }
+
+    else if (type === "warning") {
+
+        box.classList.add("warning");
+
+    }
+
+    else if (type === "info") {
+
+        box.classList.add("info");
+
+    }
+
+    box.innerHTML = message;
+
+    box.classList.add("show");
+
+    clearTimeout(box.timer);
+
+    box.timer = setTimeout(function () {
+
+        box.classList.remove("show");
+
+    }, 3000);
+
+}
+
+
+
+// ==========================================
+// PROFILE MENU
+// ==========================================
+
+const profileBtn =
+document.getElementById("profileBtn");
+
+const profileMenu =
+document.getElementById("profileMenu");
+
+if (profileBtn && profileMenu) {
+
+    profileBtn.addEventListener("click", function (e) {
+
+        e.stopPropagation();
+
+        profileMenu.classList.toggle("show");
+
+    });
+
+    document.addEventListener("click", function () {
+
+        profileMenu.classList.remove("show");
+
+    });
+
+}
+
+
+
+// ==========================================
+// VARIABLES
+// ==========================================
+
+const driverModal =
+document.getElementById("driverModal");
+
+const licenseModal =
+document.getElementById("licenseModal");
+
+const createDriverBtn =
+document.getElementById("createDriverBtn");
+
+const closeDriverModal =
+document.getElementById("closeDriverModal");
+
+const cancelDriverBtn =
+document.getElementById("cancelDriverBtn");
+
+const saveDriverBtn =
+document.getElementById("saveDriverBtn");
+
+const closeLicenseModal =
+document.getElementById("closeLicenseModal");
+
+const driverTableBody =
+document.getElementById("driverTableBody");
+
+const driverModalTitle =
+document.getElementById("driverModalTitle");
+
+
+
+let editMode = false;
+
+let selectedRow = null;
+
+let currentLicenseImage = "";
+
+
+// ==========================================
+// HELPER FUNCTIONS
+// ==========================================
+
+function clearForm() {
+
+    document.getElementById("driverName").value = "";
+
+    document.getElementById("phoneNumber").value = "";
+
+    document.getElementById("licenseNumber").value = "";
+
+    document.getElementById("licenseExpiry").value = "";
+
+    document.getElementById("licenseType").selectedIndex = 0;
+
+    document.getElementById("issuingAuthority").value = "";
+
+    document.getElementById("licenseAttachment").value = "";
+
+    document.getElementById("driverStatus").selectedIndex = 0;
+
+}
+
+
+
+function openCreateModal() {
+
+    editMode = false;
+
+    selectedRow = null;
+
+    driverModalTitle.innerText =
+    "Create New Driver";
+
+    saveDriverBtn.innerText =
+    "Save Driver";
+
+    clearForm();
+
+    driverModal.classList.add("show");
+
+}
+
+
+
+// ==========================================
+// OPEN CREATE MODAL
+// ==========================================
+
+createDriverBtn.addEventListener("click", openCreateModal);
+
+
+
+// ==========================================
+// CLOSE MODAL
+// ==========================================
+
+closeDriverModal.addEventListener("click", function () {
+
+    driverModal.classList.remove("show");
+
+});
+
+
+cancelDriverBtn.addEventListener("click", function () {
+
+    driverModal.classList.remove("show");
+
+});
+// ==========================================
+// SAVE DRIVER
+// ==========================================
+
+saveDriverBtn.addEventListener("click", function () {
+
+    const name =
+        document.getElementById("driverName").value.trim();
+
+    const phone =
+        document.getElementById("phoneNumber").value.trim();
+
+    const license =
+        document.getElementById("licenseNumber").value.trim();
+
+    const expiry =
+        document.getElementById("licenseExpiry").value;
+
+    const licenseType =
+        document.getElementById("licenseType").value;
+
+    const issuingAuthority =
+        document.getElementById("issuingAuthority").value.trim();
+
+    const status =
+        document.getElementById("driverStatus").value;
+
+    // Validation
+
+    if (
+        name === "" ||
+        phone === "" ||
+        license === "" ||
+        expiry === "" ||
+        licenseType === "" ||
+        issuingAuthority === "" ||
+        status === ""
+    ) {
+
+        showMessage(
+            "Please complete all required fields.",
+            "warning"
+        );
+
+        return;
+
+    }
+
+    const attachment =
+document.getElementById("licenseAttachment");
+
+if (attachment.files.length > 0) {
+
+    currentLicenseImage =
+    URL.createObjectURL(attachment.files[0]);
+
+}
+
+    // ======================================
+    // UPDATE DRIVER
+    // ======================================
+
+    if (editMode && selectedRow) {
+
+        selectedRow.cells[0].innerHTML =
+            "<div class='data-title'>" +
+            name +
+            "</div>";
+
+        selectedRow.cells[1].innerText =
+            phone;
+
+        selectedRow.cells[2].innerText =
+            license;
+
+        selectedRow.cells[3].innerText =
+            expiry;
+
+       selectedRow.cells[4].innerHTML = `
+    <button
+        class="btn btn-secondary view-license-btn"
+        data-type="${licenseType}"
+        data-authority="${issuingAuthority}"
+        data-image="${currentLicenseImage}">
+        View
+    </button>
+`;
+
+        selectedRow.cells[5].innerText =
+            status;
+
+        showMessage(
+            "Driver updated successfully."
+        );
+
+    }
+
+    // ======================================
+    // CREATE DRIVER
+    // ======================================
+
+    else {
+
+        const row =
+            document.createElement("tr");
+
+        row.innerHTML = `
+
+            <td>
+                <div class="data-title">
+                    ${name}
+                </div>
+            </td>
+
+            <td>
+                ${phone}
+            </td>
+
+            <td>
+                ${license}
+            </td>
+
+            <td>
+                ${expiry}
+            </td>
+
+            <td>
+
+              <button
+class="btn btn-secondary view-license-btn"
+data-type="${licenseType}"
+data-authority="${issuingAuthority}"
+data-image="${currentLicenseImage}">
+
+                    View
+
+                </button>
+
+            </td>
+
+            <td>
+                ${status}
+            </td>
+
+            <td>
+
+                <button
+                    class="btn btn-secondary edit-btn">
+
+                    Edit
+
+                </button>
+
+                <button
+                    class="btn btn-danger delete-btn">
+
+                    Delete
+
+                </button>
+
+            </td>
+
+        `;
+
+        driverTableBody.appendChild(row);
+
+        showMessage(
+            "Driver created successfully."
+        );
+
+    }
+
+    driverModal.classList.remove("show");
+
+    clearForm();
+
+    editMode = false;
+
+    selectedRow = null;
+
+});
+// ==========================================
+// EDIT / DELETE / VIEW LICENSE
+// ==========================================
+
+document.addEventListener("click", function (e) {
+
+    // ======================================
+    // EDIT DRIVER
+    // ======================================
+
+    if (e.target.classList.contains("edit-btn")) {
+
+        selectedRow = e.target.closest("tr");
+
+        editMode = true;
+
+        driverModalTitle.innerText = "Edit Driver";
+
+        saveDriverBtn.innerText = "Update Driver";
+
+        document.getElementById("driverName").value =
+            selectedRow.cells[0].querySelector(".data-title").innerText.trim();
+
+        document.getElementById("phoneNumber").value =
+            selectedRow.cells[1].innerText.trim();
+
+        document.getElementById("licenseNumber").value =
+            selectedRow.cells[2].innerText.trim();
+
+        document.getElementById("licenseExpiry").value =
+            selectedRow.cells[3].innerText.trim();
+
+        const viewButton =
+            selectedRow.querySelector(".view-license-btn");
+
+        if (viewButton) {
+
+            document.getElementById("licenseType").value =
+                viewButton.dataset.type;
+
+            document.getElementById("issuingAuthority").value =
+                viewButton.dataset.authority;
+
+        }
+
+        document.getElementById("driverStatus").value =
+            selectedRow.cells[5].innerText.trim();
+
+        driverModal.classList.add("show");
+
+        return;
+
+    }
+
+    // ======================================
+    // DELETE DRIVER
+    // ======================================
+
+if (e.target.classList.contains("delete-btn")) {
+
+    e.target.closest("tr").remove();
+
+    showMessage(
+        "Driver deleted successfully."
+    );
+
+    return;
+
+}
+
+    // ======================================
+    // VIEW LICENSE
+    // ======================================
+
+    if (e.target.classList.contains("view-license-btn")) {
+
+        const row = e.target.closest("tr");
+
+        document.getElementById("viewDriverName").innerText =
+            row.cells[0].innerText.trim();
+
+        document.getElementById("viewPhone").innerText =
+            row.cells[1].innerText.trim();
+
+        document.getElementById("viewLicenseNumber").innerText =
+            row.cells[2].innerText.trim();
+
+        document.getElementById("viewExpiry").innerText =
+            row.cells[3].innerText.trim();
+
+        document.getElementById("viewLicenseType").innerText =
+            e.target.dataset.type;
+
+        document.getElementById("viewAuthority").innerText =
+            e.target.dataset.authority;
+
+            const img =
+document.getElementById("viewLicenseImage");
+
+if (e.target.dataset.image) {
+
+    img.src = e.target.dataset.image;
+
+    img.style.display = "block";
+
+}
+else {
+
+    img.style.display = "none";
+
+}
+
+        licenseModal.classList.add("show");
+
+        return;
+
+    }
+
+});
+// ==========================================
+// CLOSE LICENSE MODAL
+// ==========================================
+
+closeLicenseModal.addEventListener("click", function () {
+
+    licenseModal.classList.remove("show");
+
+});
+
+
+
+// ==========================================
+// CLOSE DRIVER MODAL
+// ==========================================
+
+closeDriverModal.addEventListener("click", function () {
+
+    driverModal.classList.remove("show");
+
+});
+
+
+
+cancelDriverBtn.addEventListener("click", function () {
+
+    driverModal.classList.remove("show");
+
+});
+
+
+
+// ==========================================
+// CLOSE MODALS WHEN CLICKING OUTSIDE
+// ==========================================
+
+window.addEventListener("click", function (e) {
+
+    if (e.target === driverModal) {
+
+        driverModal.classList.remove("show");
+
+    }
+
+    if (e.target === licenseModal) {
+
+        licenseModal.classList.remove("show");
+
+    }
+
+});
+
+
+
+// ==========================================
+// LOGOUT
+// ==========================================
+
+const logoutBtn =
+document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+
+    logoutBtn.addEventListener("click", function () {
+
+        window.location.href = "login.html";
+
+    });
+
+}
+
+
+
+// ==========================================
+// PAGE LOADED
+// ==========================================
+
+window.addEventListener("load", function () {
+
+    console.log("Driver Management Loaded Successfully");
+
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,1619 @@
+<!-- Abrar Alharbi -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+
+Employee Management | Transportation Management System
+
+</title>
+
+<link href="css/style.css"
+      rel="stylesheet"/>
+
+</head>
+
+<body>
+
+<!-- ==========================================
+                    HEADER
+========================================== -->
+
+<header class="app-header">
+
+<!-- Top Header -->
+
+<div class="header-top">
+
+<div class="container header-top-inner">
+
+<span>
+
+King Fahd Armed Forces Hospital in Jeddah
+
+</span>
+
+<span>
+
+Transportation Management System
+
+</span>
+
+</div>
+
+</div>
+
+<!-- Main Header -->
+
+<div class="container header-main-inner">
+
+<!-- Brand -->
+
+<div class="brand">
+
+<div class="brand-mark">
+
+<img src="images/hospital-logo.png"
+     alt="Hospital Logo"
+     style="width:45px;height:45px;border-radius:12px;">
+
+</div>
+
+<div>
+
+<h1 class="brand-title">
+
+Transportation Management
+
+</h1>
+
+<p class="brand-subtitle">
+
+Transportation Services Platform
+
+</p>
+
+</div>
+
+</div>
+
+<!-- Navigation -->
+
+<nav class="main-nav">
+
+    <a href="trip-management.html"
+   class="nav-link">
+
+Trip Management
+
+</a>
+
+
+
+<a href="vehicle-management.html"
+   class="nav-link">
+
+Vehicle Management
+
+</a>
+
+<a href="driver-management.html"
+   class="nav-link">
+
+Driver Management
+
+</a>
+
+<a href="employee-management.html"
+   class="nav-link active">
+
+Employee Management
+
+</a>
+
+<a href="reports.html"
+   class="nav-link">
+
+Reports
+
+</a>
+
+</nav>
+
+<!-- Header Actions -->
+
+<div class="header-actions">
+
+<div class="profile-dropdown">
+
+<button class="manager-chip"
+        id="profileBtn">
+
+<span>A</span>
+
+<div>
+
+<strong>
+
+Abrar Alharbi
+
+</strong>
+
+<br>
+
+
+</div>
+
+</button>
+
+<div class="profile-menu"
+     id="profileMenu">
+
+<button class="menu-item"
+        id="logoutBtn">
+
+Sign Out
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ==========================================
+                    MAIN
+========================================== -->
+
+<main>
+
+<section class="section">
+
+<div class="container">
+
+<div class="card">
+
+<div class="card-header">
+
+<div>
+
+<h2 class="card-title">
+
+Employee Management
+
+</h2>
+
+<p class="section-subtitle">
+
+Create and manage transportation employees.
+
+</p>
+
+</div>
+
+<button class="btn btn-primary"
+        id="createEmployeeBtn">
+
++ Create New Employee
+
+</button>
+
+</div>
+
+<div class="card-body">
+
+<div class="table-responsive">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Employee ID
+
+</th>
+
+<th>
+
+Employee Name
+
+</th>
+
+<th>
+
+Department
+
+</th>
+
+<th>
+
+Housing
+
+</th>
+
+<th>
+
+Mobile Number
+
+</th>
+
+<th>
+
+User Status
+
+</th>
+
+<th>
+
+Actions
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody id="employeeTableBody">
+<tbody id="employeeTableBody">
+
+<tr>
+
+<td>
+
+<div class="data-title">
+
+EMP-001
+
+</div>
+
+</td>
+
+<td>
+
+Ahmed Ali
+
+</td>
+
+<td>
+
+Nursing
+
+</td>
+
+<td>
+
+Obhur Housing
+
+</td>
+
+<td>
+
+0501234567
+
+</td>
+
+<td>
+
+Active
+
+</td>
+
+<td>
+
+<button class="btn btn-secondary edit-btn">
+
+Edit
+
+</button>
+
+<button class="btn btn-danger delete-btn">
+
+Delete
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<div class="data-title">
+
+EMP-002
+
+</div>
+
+</td>
+
+<td>
+
+Sara Mohammed
+
+</td>
+
+<td>
+
+Administration
+
+</td>
+
+<td>
+
+Al Hamra
+
+</td>
+
+<td>
+
+0559876543
+
+</td>
+
+<td>
+
+Inactive
+
+</td>
+
+<td>
+
+<button class="btn btn-secondary edit-btn">
+
+Edit
+
+</button>
+
+<button class="btn btn-danger delete-btn">
+
+Delete
+
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<div class="data-title">
+
+EMP-003
+
+</div>
+
+</td>
+
+<td>
+
+Khalid Hassan
+
+</td>
+
+<td>
+
+Medical
+
+</td>
+
+<td>
+
+Al Andalus
+
+</td>
+
+<td>
+
+0544567890
+
+</td>
+
+<td>
+
+Active
+
+</td>
+
+<td>
+
+<button class="btn btn-secondary edit-btn">
+
+Edit
+
+</button>
+
+<button class="btn btn-danger delete-btn">
+
+Delete
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- ==========================================
+            CREATE / EDIT EMPLOYEE MODAL
+========================================== -->
+
+<div class="modal"
+     id="employeeModal">
+
+<div class="modal-dialog">
+
+<div class="modal-header">
+
+<h3 class="modal-title"
+    id="employeeModalTitle">
+
+Create New Employee
+
+</h3>
+
+<button class="close-btn"
+        id="closeEmployeeModal">
+
+×
+
+</button>
+
+</div>
+
+<div class="modal-body">
+
+<div class="form-grid">
+
+<!-- Employee ID -->
+
+<div class="form-group">
+
+<label class="label">
+
+Employee ID
+
+<span class="required">
+
+*
+
+</span>
+
+</label>
+
+<input type="text"
+       class="input"
+       id="employeeId"
+       placeholder="Enter employee ID">
+
+</div>
+
+<!-- Employee Name -->
+
+<div class="form-group">
+
+<label class="label">
+
+Employee Name
+
+<span class="required">
+
+*
+
+</span>
+
+</label>
+
+<input type="text"
+       class="input"
+       id="employeeName"
+       placeholder="Enter employee name">
+
+</div>
+<!-- Department -->
+
+<div class="form-group">
+
+<label class="label">
+
+Department
+
+<span class="required">
+
+*
+
+</span>
+
+</label>
+
+<select class="select"
+        id="department">
+
+<option>
+
+Select Department
+
+</option>
+
+<option>
+
+Nursing
+
+</option>
+
+<option>
+
+Medical
+
+</option>
+
+<option>
+
+Administration
+
+</option>
+
+<option>
+
+Laboratory
+
+</option>
+
+<option>
+
+Pharmacy
+
+</option>
+
+</select>
+
+</div>
+
+<!-- Housing -->
+
+<div class="form-group">
+
+<label class="label">
+
+Housing
+
+<span class="required">
+
+*
+
+</span>
+
+</label>
+
+<select class="select"
+        id="housing">
+
+<option>
+
+Select Housing
+
+</option>
+
+<option>
+
+Obhur Housing
+
+</option>
+
+<option>
+
+Al Hamra
+
+</option>
+
+<option>
+
+Al Andalus
+
+</option>
+
+</select>
+
+</div>
+
+<!-- Mobile Number -->
+
+<div class="form-group">
+
+<label class="label">
+
+Mobile Number
+
+<span class="required">
+
+*
+
+</span>
+
+</label>
+
+<input type="tel"
+       class="input"
+       id="mobileNumber"
+       placeholder="05XXXXXXXX">
+
+</div>
+
+<!-- User Status -->
+
+<div class="form-group">
+
+<label class="label">
+
+User Status
+
+<span class="required">
+
+*
+
+</span>
+
+</label>
+
+<select class="select"
+        id="userStatus">
+
+<option>
+
+Select Status
+
+</option>
+
+<option>
+
+Active
+
+</option>
+
+<option>
+
+Inactive
+
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="modal-footer">
+
+<button class="btn btn-primary"
+        id="saveEmployeeBtn">
+
+Save Employee
+
+</button>
+
+<button class="btn btn-secondary"
+        id="cancelEmployeeBtn">
+
+Cancel
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+                    FOOTER
+========================================== -->
+
+<footer class="app-footer">
+
+<div class="container footer-inner">
+
+<div>
+
+
+
+<h2 class="footer-title">
+
+Armed Forces Hospital - Jeddah
+
+</h2>
+
+
+
+<p class="footer-text">
+
+A sustainable healthy community for Ministry of Defense personnel and their families.
+
+</p>
+
+
+
+<h2 class="footer-title"
+style="margin-top:15px;">
+
+
+Our Mission
+
+
+</h2>
+
+
+
+<p class="footer-text">
+
+Promoting healthy lifestyles and providing integrated preventive and curative healthcare services with professionalism and international quality standards.
+
+</p>
+
+</div>
+
+<div>
+
+<h2 class="footer-title">
+
+Transportation
+
+</h2>
+
+<ul class="footer-list">
+    <li>Trip Management</li>
+    <li>Vehicle Management</li>
+    <li>Driver Management</li>
+    <li>Employee Management</li>
+    <li>Reports</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h2 class="footer-title">
+
+Contact Us
+
+</h2>
+
+<ul class="footer-list">
+
+<li>Saudi Arabia - Jeddah</li>
+
+<li>Corniche Road</li>
+
+<li>23311</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<div class="container">
+
+© 2026 Armed Forces Hospital - Jeddah. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<div id="messageBox" class="message-box"></div>
+
+<script>
+    // ==========================================
+// MESSAGE BOX
+// ==========================================
+
+function showMessage(message, type = "success") {
+
+    const box = document.getElementById("messageBox");
+
+    box.className = "message-box";
+
+    if (type === "error") {
+
+        box.classList.add("error");
+
+    } else if (type === "warning") {
+
+        box.classList.add("warning");
+
+    } else if (type === "info") {
+
+        box.classList.add("info");
+
+    }
+
+    box.innerHTML = message;
+
+    box.classList.add("show");
+
+    clearTimeout(box.timer);
+
+    box.timer = setTimeout(function () {
+
+        box.classList.remove("show");
+
+    }, 3000);
+
+}
+
+
+
+// ==========================================
+// PROFILE MENU
+// ==========================================
+
+const profileBtn = document.getElementById("profileBtn");
+const profileMenu = document.getElementById("profileMenu");
+
+if (profileBtn && profileMenu) {
+
+    profileBtn.addEventListener("click", function (e) {
+
+        e.stopPropagation();
+
+        profileMenu.classList.toggle("show");
+
+    });
+
+    document.addEventListener("click", function () {
+
+        profileMenu.classList.remove("show");
+
+    });
+
+}
+
+
+
+// ==========================================
+// VARIABLES
+// ==========================================
+
+const employeeModal =
+document.getElementById("employeeModal");
+
+const createEmployeeBtn =
+document.getElementById("createEmployeeBtn");
+
+const closeEmployeeModal =
+document.getElementById("closeEmployeeModal");
+
+const cancelEmployeeBtn =
+document.getElementById("cancelEmployeeBtn");
+
+const saveEmployeeBtn =
+document.getElementById("saveEmployeeBtn");
+
+const employeeModalTitle =
+document.getElementById("employeeModalTitle");
+
+const employeeTableBody =
+document.getElementById("employeeTableBody");
+
+let editMode = false;
+
+let selectedRow = null;
+
+
+
+// ==========================================
+// OPEN CREATE EMPLOYEE
+// ==========================================
+
+createEmployeeBtn.addEventListener("click", function () {
+
+    editMode = false;
+
+    selectedRow = null;
+
+    employeeModalTitle.innerText =
+    "Create New Employee";
+
+    saveEmployeeBtn.innerText =
+    "Save Employee";
+
+    document.getElementById("employeeId").value = "";
+
+    document.getElementById("employeeName").value = "";
+
+    document.getElementById("department").selectedIndex = 0;
+
+    document.getElementById("housing").selectedIndex = 0;
+
+    document.getElementById("mobileNumber").value = "";
+
+    document.getElementById("userStatus").selectedIndex = 0;
+
+    employeeModal.classList.add("show");
+
+});
+// ==========================================
+// CLOSE EMPLOYEE MODAL
+// ==========================================
+
+closeEmployeeModal.addEventListener("click", function () {
+
+    employeeModal.classList.remove("show");
+
+});
+
+
+cancelEmployeeBtn.addEventListener("click", function () {
+
+    employeeModal.classList.remove("show");
+
+});
+
+
+window.addEventListener("click", function (e) {
+
+    if (e.target === employeeModal) {
+
+        employeeModal.classList.remove("show");
+
+    }
+
+});
+
+
+
+
+// ==========================================
+// SAVE EMPLOYEE (CREATE + UPDATE)
+// ==========================================
+
+saveEmployeeBtn.addEventListener("click", function () {
+
+
+    const employeeId =
+    document.getElementById("employeeId").value.trim();
+
+
+    const employeeName =
+    document.getElementById("employeeName").value.trim();
+
+
+    const department =
+    document.getElementById("department").value;
+
+
+    const housing =
+    document.getElementById("housing").value;
+
+
+    const mobileNumber =
+    document.getElementById("mobileNumber").value.trim();
+
+
+    const userStatus =
+    document.getElementById("userStatus").value;
+
+
+
+
+    // ============================
+    // VALIDATION
+    // ============================
+
+    if (
+
+        employeeId === "" ||
+
+        employeeName === "" ||
+
+        department === "Select Department" ||
+
+        housing === "Select Housing" ||
+
+        mobileNumber === "" ||
+
+        userStatus === "Select Status"
+
+    ) {
+
+
+        showMessage(
+            "Please complete all required fields.",
+            "warning"
+        );
+
+
+        return;
+
+    }
+
+
+
+
+    // ============================
+    // UPDATE EMPLOYEE
+    // ============================
+
+    if(editMode && selectedRow){
+
+
+        selectedRow.cells[0].innerHTML =
+
+        `
+        <div class="data-title">
+        ${employeeId}
+        </div>
+        `;
+
+
+        selectedRow.cells[1].innerText =
+        employeeName;
+
+
+        selectedRow.cells[2].innerText =
+        department;
+
+
+        selectedRow.cells[3].innerText =
+        housing;
+
+
+        selectedRow.cells[4].innerText =
+        mobileNumber;
+
+
+        selectedRow.cells[5].innerText =
+        userStatus;
+
+
+
+        showMessage(
+            "Employee updated successfully."
+        );
+
+
+    }
+
+
+
+
+
+    // ============================
+    // CREATE NEW EMPLOYEE
+    // ============================
+
+    else{
+
+
+        const row =
+        document.createElement("tr");
+
+
+
+        row.innerHTML = `
+
+
+        <td>
+
+            <div class="data-title">
+
+            ${employeeId}
+
+            </div>
+
+        </td>
+
+
+        <td>
+
+            ${employeeName}
+
+        </td>
+
+
+        <td>
+
+            ${department}
+
+        </td>
+
+
+        <td>
+
+            ${housing}
+
+        </td>
+
+
+        <td>
+
+            ${mobileNumber}
+
+        </td>
+
+
+        <td>
+
+            ${userStatus}
+
+        </td>
+
+
+        <td>
+
+
+        <button class="btn btn-secondary edit-btn">
+
+        Edit
+
+        </button>
+
+
+
+        <button class="btn btn-danger delete-btn">
+
+        Delete
+
+        </button>
+
+
+        </td>
+
+
+        `;
+
+
+
+        employeeTableBody.appendChild(row);
+
+
+
+        showMessage(
+            "Employee created successfully."
+        );
+
+
+    }
+
+
+
+
+    // RESET
+
+    employeeModal.classList.remove("show");
+
+
+    editMode = false;
+
+
+    selectedRow = null;
+
+
+
+    document.getElementById("employeeId").value = "";
+
+    document.getElementById("employeeName").value = "";
+
+    document.getElementById("department").selectedIndex = 0;
+
+    document.getElementById("housing").selectedIndex = 0;
+
+    document.getElementById("mobileNumber").value = "";
+
+    document.getElementById("userStatus").selectedIndex = 0;
+
+
+
+});
+// ==========================================
+// EDIT & DELETE EMPLOYEE BUTTONS
+// ==========================================
+
+document.addEventListener("click", function(e){
+
+
+
+// ==========================================
+// EDIT EMPLOYEE
+// ==========================================
+
+if(e.target.classList.contains("edit-btn")){
+
+
+    selectedRow =
+    e.target.closest("tr");
+
+
+    editMode = true;
+
+
+
+    employeeModalTitle.innerText =
+    "Edit Employee";
+
+
+    saveEmployeeBtn.innerText =
+    "Update Employee";
+
+
+
+    // Fill data inside modal
+
+    document.getElementById("employeeId").value =
+    selectedRow.cells[0]
+    .innerText
+    .trim();
+
+
+
+    document.getElementById("employeeName").value =
+    selectedRow.cells[1]
+    .innerText
+    .trim();
+
+
+
+    document.getElementById("department").value =
+    selectedRow.cells[2]
+    .innerText
+    .trim();
+
+
+
+    document.getElementById("housing").value =
+    selectedRow.cells[3]
+    .innerText
+    .trim();
+
+
+
+    document.getElementById("mobileNumber").value =
+    selectedRow.cells[4]
+    .innerText
+    .trim();
+
+
+
+    document.getElementById("userStatus").value =
+    selectedRow.cells[5]
+    .innerText
+    .trim();
+
+
+
+    // Open same modal
+
+    employeeModal.classList.add("show");
+
+
+}
+
+
+
+// ==========================================
+// DELETE EMPLOYEE
+// ==========================================
+
+
+if(e.target.classList.contains("delete-btn")){
+
+
+    const row =
+    e.target.closest("tr");
+
+
+    row.remove();
+
+
+
+    showMessage(
+        "Employee deleted successfully.",
+        "error"
+    );
+
+
+}
+
+
+
+});
+// ==========================================
+// LOGOUT
+// ==========================================
+
+const logoutBtn =
+document.getElementById("logoutBtn");
+
+
+if(logoutBtn){
+
+
+    logoutBtn.addEventListener("click",function(){
+
+
+        window.location.href =
+        "login.html";
+
+
+    });
+
+
+}
+
+
+
+// ==========================================
+// CHECK DUPLICATE EMPLOYEE ID
+// ==========================================
+
+function employeeExists(id){
+
+
+    const rows =
+    employeeTableBody.querySelectorAll("tr");
+
+
+
+    for(let row of rows){
+
+
+
+        // Ignore current row when editing
+
+        if(editMode && row === selectedRow){
+
+            continue;
+
+        }
+
+
+
+        const currentId =
+        row.cells[0]
+        .innerText
+        .trim();
+
+
+
+        if(currentId === id){
+
+
+            return true;
+
+
+        }
+
+
+    }
+
+
+
+    return false;
+
+
+}
+
+
+
+
+// ==========================================
+// MOBILE NUMBER VALIDATION
+// ==========================================
+
+function validMobile(number){
+
+
+    const pattern =
+    /^05[0-9]{8}$/;
+
+
+
+    return pattern.test(number);
+
+
+}
+
+
+
+// ==========================================
+// FINAL SAVE VALIDATION FIX
+// ==========================================
+
+
+// Remove duplicate employee id checking from extra click events
+// Use this function only when saving
+
+function checkEmployeeIdExists(id){
+
+
+    const rows =
+    employeeTableBody.querySelectorAll("tr");
+
+
+
+    for(let row of rows){
+
+
+        // ignore selected row during edit
+
+        if(editMode && row === selectedRow){
+
+            continue;
+
+        }
+
+
+
+        const currentId =
+        row.cells[0]
+        .innerText
+        .trim();
+
+
+
+        if(currentId === id){
+
+            return true;
+
+        }
+
+
+    }
+
+
+
+    return false;
+
+}
+
+
+
+// ==========================================
+// OVERRIDE SAVE BUTTON ACTION
+// ==========================================
+
+
+saveEmployeeBtn.onclick = function(){
+
+
+    const employeeId =
+    document.getElementById("employeeId")
+    .value
+    .trim();
+
+
+
+    const employeeName =
+    document.getElementById("employeeName")
+    .value
+    .trim();
+
+
+
+    const mobile =
+    document.getElementById("mobileNumber")
+    .value
+    .trim();
+
+
+
+
+    if(checkEmployeeIdExists(employeeId)){
+
+
+        showMessage(
+            "Employee ID already exists.",
+            "warning"
+        );
+
+
+        return;
+
+    }
+
+
+
+    if(!/^05[0-9]{8}$/.test(mobile)){
+
+
+        showMessage(
+            "Mobile number must start with 05 and contain 10 digits.",
+            "warning"
+        );
+
+
+        return;
+
+    }
+
+
+
+    // Continue with the original save function
+
+    const event =
+    new Event("click");
+
+
+};
+
+
+
+// ==========================================
+// TABLE ROW SELECTION
+// ==========================================
+
+
+document.querySelectorAll("tbody tr")
+.forEach(function(row){
+
+
+    row.addEventListener("click",function(){
+
+
+
+        document.querySelectorAll("tbody tr")
+        .forEach(function(r){
+
+
+            r.classList.remove(
+            "selected-row"
+            );
+
+
+        });
+
+
+
+        row.classList.add(
+        "selected-row"
+        );
+
+
+    });
+
+
+
+});
+</script>
+</body>
+</html>

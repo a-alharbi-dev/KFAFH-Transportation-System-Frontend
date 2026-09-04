@@ -1,0 +1,1773 @@
+<!--  updated by Abrar Alharbi -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+
+<title>
+
+Emergency Requests | Transportation Management System
+
+</title>
+
+
+
+
+<link href="css/style.css"
+      rel="stylesheet"/>
+
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+
+
+<!-- ==========================================
+                    HEADER
+========================================== -->
+
+
+<header class="app-header">
+
+
+
+<!-- TOP HEADER -->
+
+
+<div class="header-top">
+
+
+<div class="container header-top-inner">
+
+
+
+<span>
+
+King Fahd Armed Forces Hospital in Jeddah
+
+</span>
+
+
+
+<span>
+
+Transportation Management System
+
+</span>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- MAIN HEADER -->
+
+
+<div class="container header-main-inner">
+
+
+
+
+
+<!-- BRAND -->
+
+
+<div class="brand">
+
+
+
+<div class="brand-mark">
+
+
+<img src="images/hospital-logo.png"
+alt="Hospital Logo"
+style="width:45px;height:45px;border-radius:12px;">
+
+
+
+</div>
+
+
+
+
+<div>
+
+
+
+<h1 class="brand-title">
+
+
+Movement Officer
+
+
+</h1>
+
+
+
+<p class="brand-subtitle">
+
+
+Transportation Services Platform
+
+
+</p>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- NAVIGATION -->
+
+
+<nav class="main-nav">
+
+
+
+
+            <a href="movement-officer.html"
+               class="nav-link ">
+
+                Trip Operation List
+
+            </a>
+
+            <a href="emergency-requests.html"
+               class="nav-link active">
+
+                Emergency Requests
+
+            </a>
+
+            <a href="driver-log.html"
+               class="nav-link ">
+
+                Driver Confirmation Log
+
+            </a>
+
+
+
+</nav>
+
+
+
+
+
+
+
+<!-- PROFILE -->
+
+
+<div class="header-actions">
+
+
+
+<div class="profile-dropdown">
+
+
+
+<button class="manager-chip"
+id="profileBtn">
+
+
+
+<span>
+
+MO
+
+</span>
+
+
+
+
+<div>
+
+
+
+<strong>
+
+Movement Officer
+
+</strong>
+
+
+
+
+
+
+</div>
+
+
+
+</button>
+
+
+
+
+
+<div class="profile-menu"
+id="profileMenu">
+
+
+
+<button class="menu-item"
+id="logoutBtn">
+
+
+
+Sign Out
+
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</header>
+<!-- ==========================================
+                    MAIN
+========================================== -->
+
+
+<main>
+
+
+<section class="section">
+
+
+<div class="container">
+
+
+
+<div class="card">
+
+
+
+
+
+<div class="card-header">
+
+
+
+<div>
+
+
+<h2 class="card-title">
+
+Emergency Requests
+
+</h2>
+
+
+
+<p class="section-subtitle">
+
+Review and manage emergency transportation requests.
+
+</p>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card-body">
+
+
+
+
+
+<div class="table-responsive">
+
+
+
+<table>
+
+
+
+<thead>
+
+
+
+<tr>
+
+
+
+<th>
+
+Request No
+
+</th>
+
+
+
+
+<th>
+
+Pickup Location
+
+</th>
+
+
+
+
+<th>
+
+Destination
+
+</th>
+
+
+
+
+<th>
+
+Time
+
+</th>
+
+
+
+
+<th>
+
+Reason
+
+</th>
+
+
+
+
+<th>
+
+Status
+
+</th>
+
+
+
+
+<th>
+
+Actions
+
+</th>
+
+
+
+
+</tr>
+
+
+
+</thead>
+
+
+
+
+
+
+
+<tbody id="emergencyTableBody">
+
+
+
+<tr>
+
+
+
+<td>
+
+ER-1003
+
+</td>
+
+
+
+
+<td>
+
+Obhur Housing
+
+</td>
+
+
+
+
+<td>
+
+Armed Forces Hospital
+
+</td>
+
+
+
+
+<td>
+
+11:25 AM
+
+</td>
+
+
+
+
+<td>
+
+Medical Equipment
+
+</td>
+
+
+
+
+<td>
+
+Pending
+
+</td>
+
+
+
+
+<td>
+
+
+
+<button class="btn btn-primary approve-btn">
+
+
+Approve
+
+
+</button>
+
+
+
+
+<button class="btn btn-danger reject-btn">
+
+
+Reject
+
+
+</button>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+
+
+<tr>
+
+
+
+<td>
+
+ER-1004
+
+</td>
+
+
+
+
+<td>
+
+Obhur Housing
+
+</td>
+
+
+
+
+<td>
+
+Armed Forces Hospital
+
+</td>
+
+
+
+
+<td>
+
+12:05 PM
+
+</td>
+
+
+
+
+<td>
+
+Medicine Delivery
+
+</td>
+
+
+
+
+<td>
+
+Pending
+
+</td>
+
+
+
+
+<td>
+
+
+
+<button class="btn btn-primary approve-btn">
+
+
+Approve
+
+
+</button>
+
+
+
+
+<button class="btn btn-danger reject-btn">
+
+
+Reject
+
+
+</button>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+</main>
+<!-- ==========================================
+                    FOOTER
+========================================== -->
+
+
+<footer class="app-footer">
+
+
+<div class="container footer-inner">
+
+
+
+<div>
+
+
+
+<h2 class="footer-title">
+
+Armed Forces Hospital - Jeddah
+
+</h2>
+
+
+
+<p class="footer-text">
+
+A sustainable healthy community for Ministry of Defense personnel and their families.
+
+</p>
+
+
+
+<h2 class="footer-title"
+style="margin-top:15px;">
+
+
+Our Mission
+
+
+</h2>
+
+
+
+<p class="footer-text">
+
+Promoting healthy lifestyles and providing integrated preventive and curative healthcare services with professionalism and international quality standards.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div>
+
+
+<h2 class="footer-title">
+
+Transportation
+
+</h2>
+
+
+
+<ul class="footer-list">
+
+
+<li>
+
+Trip Operation List
+
+</li>
+
+
+<li>
+
+Emergency Requests
+
+</li>
+
+
+
+
+
+</ul>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div>
+
+
+
+<h2 class="footer-title">
+
+Contact Us
+
+</h2>
+
+
+
+<ul class="footer-list">
+
+
+<li>
+
+Saudi Arabia - Jeddah
+
+</li>
+
+
+<li>
+
+Corniche Road
+
+</li>
+
+
+<li>
+
+Al Andalus
+
+</li>
+
+
+<li>
+
+23311
+
+</li>
+
+
+
+</ul>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="footer-bottom">
+
+
+<div class="container">
+
+
+© 2026 Armed Forces Hospital - Jeddah.
+All Rights Reserved.
+
+
+</div>
+
+
+</div>
+
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+<!-- ==========================================
+        APPROVE EMERGENCY MODAL
+========================================== -->
+
+
+
+<div class="modal"
+id="approveModal">
+
+
+
+<div class="modal-dialog">
+
+
+
+
+
+<div class="modal-header">
+
+
+
+<h3 class="modal-title">
+
+Assign Vehicle & Driver
+
+</h3>
+
+
+
+
+<button class="close-btn"
+onclick="closeModal()">
+
+
+×
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="modal-body">
+
+
+
+<input type="hidden"
+id="selectedRequest">
+
+
+
+
+
+<div class="form-grid">
+
+
+
+
+
+
+<div class="form-group">
+
+
+
+<label class="label">
+
+Vehicle
+
+</label>
+
+
+
+
+<select class="select"
+id="vehicleSelect">
+
+
+<option>
+
+BUS-101
+
+</option>
+
+
+<option>
+
+BUS-102
+
+</option>
+
+
+<option>
+
+BUS-103
+
+</option>
+
+
+<option>
+
+BUS-104
+
+</option>
+
+
+<option>
+
+VAN-205
+
+</option>
+
+
+
+</select>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+
+<label class="label">
+
+Driver
+
+</label>
+
+
+
+
+<select class="select"
+id="driverSelect">
+
+
+<option>
+
+Ahmed Ali
+
+</option>
+
+
+<option>
+
+Mohammed Saleh
+
+</option>
+
+
+<option>
+
+Fahad Omar
+
+</option>
+
+
+<option>
+
+Khaled Sami
+
+</option>
+
+
+<option>
+
+Yousef Hassan
+
+</option>
+
+
+
+</select>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="modal-footer">
+
+
+
+<button class="btn btn-secondary"
+onclick="closeModal()">
+
+
+
+Cancel
+
+
+</button>
+
+
+
+
+
+<button class="btn btn-primary"
+onclick="approveRequest()">
+
+
+
+Approve Request
+
+
+</button>
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+<!-- MESSAGE BOX -->
+
+
+<div id="messageBox"
+class="message-box">
+
+
+</div>
+<script>
+
+
+// ==========================================
+// EMERGENCY REQUEST DATA
+// ==========================================
+
+
+let emergencyRequests = [
+
+
+{
+
+id:"ER-1003",
+
+pickup:"Obhur Housing",
+
+destination:"Armed Forces Hospital",
+
+time:"11:25 AM",
+
+reason:"Medical Equipment",
+
+status:"Pending",
+
+vehicle:"",
+
+driver:""
+
+
+},
+
+
+
+{
+
+id:"ER-1004",
+
+pickup:"Obhur Housing",
+
+destination:"Armed Forces Hospital",
+
+time:"12:05 PM",
+
+reason:"Medicine Delivery",
+
+status:"Pending",
+
+vehicle:"",
+
+driver:""
+
+
+}
+
+
+
+];
+
+
+
+
+
+
+
+
+
+// ==========================================
+// MESSAGE FUNCTION
+// ==========================================
+
+
+function showMessage(message,type="success"){
+
+
+let box=document.getElementById("messageBox");
+
+
+
+box.innerHTML=message;
+
+
+
+box.className="message-box show";
+
+
+
+if(type==="error"){
+
+
+box.classList.add("error");
+
+
+}
+
+
+
+setTimeout(function(){
+
+
+box.classList.remove("show");
+
+
+},3000);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+// ==========================================
+// RENDER EMERGENCY TABLE
+// ==========================================
+
+
+function renderEmergency(){
+
+
+
+let body=document.getElementById("emergencyTableBody");
+
+
+
+body.innerHTML="";
+
+
+
+
+
+
+emergencyRequests.forEach(request=>{
+
+
+
+
+
+let action="";
+
+
+
+if(request.status==="Pending"){
+
+
+action=`
+
+
+<button class="btn btn-primary approve-btn"
+onclick="openApprove('${request.id}')">
+
+
+Approve
+
+
+</button>
+
+
+
+<button class="btn btn-danger"
+onclick="rejectRequest('${request.id}')">
+
+
+Reject
+
+
+</button>
+
+
+`;
+
+
+
+}
+
+
+
+else if(request.status==="Approved"){
+
+
+action=`
+
+
+<span>
+
+
+${request.vehicle}
+
+<br>
+
+
+${request.driver}
+
+
+</span>
+
+
+`;
+
+
+
+}
+
+
+
+
+else{
+
+
+action=`
+
+
+<span>
+
+
+Request Rejected
+
+
+</span>
+
+
+`;
+
+
+
+}
+
+
+
+
+
+
+
+
+body.innerHTML += `
+
+
+<tr>
+
+
+
+<td>
+
+${request.id}
+
+</td>
+
+
+
+
+
+<td>
+
+${request.pickup}
+
+</td>
+
+
+
+
+
+<td>
+
+${request.destination}
+
+</td>
+
+
+
+
+
+<td>
+
+${request.time}
+
+</td>
+
+
+
+
+
+<td>
+
+${request.reason}
+
+</td>
+
+
+
+
+
+<td>
+
+
+${request.status}
+
+
+</td>
+
+
+
+
+
+<td>
+
+
+${action}
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+`;
+
+
+
+
+
+});
+
+
+
+
+
+}
+
+// ==========================================
+// OPEN APPROVE MODAL
+// ==========================================
+
+
+function openApprove(id){
+
+
+document.getElementById("selectedRequest").value=id;
+
+
+
+document
+.getElementById("approveModal")
+.classList.add("show");
+
+
+
+}
+
+
+
+
+
+
+
+// ==========================================
+// CLOSE MODAL
+// ==========================================
+
+
+function closeModal(){
+
+
+
+document
+.getElementById("approveModal")
+.classList.remove("show");
+
+
+
+}
+
+
+
+
+
+
+
+
+// ==========================================
+// APPROVE REQUEST
+// ==========================================
+
+
+function approveRequest(){
+
+
+
+let id =
+document.getElementById("selectedRequest").value;
+
+
+
+let vehicle =
+document.getElementById("vehicleSelect").value;
+
+
+
+let driver =
+document.getElementById("driverSelect").value;
+
+
+
+
+
+
+let request =
+emergencyRequests.find(
+item=>item.id===id
+);
+
+
+
+
+
+
+if(request){
+
+
+request.status="Approved";
+
+
+request.vehicle=vehicle;
+
+
+request.driver=driver;
+
+
+
+renderEmergency();
+
+
+
+closeModal();
+
+
+
+showMessage(
+"Emergency request approved successfully."
+);
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+// ==========================================
+// REJECT REQUEST
+// ==========================================
+
+
+function rejectRequest(id){
+
+
+
+let request =
+emergencyRequests.find(
+item=>item.id===id
+);
+
+
+
+
+
+if(request){
+
+
+
+request.status="Rejected";
+
+
+
+renderEmergency();
+
+
+
+showMessage(
+"Emergency request rejected.",
+"error"
+);
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+// ==========================================
+// PROFILE MENU
+// ==========================================
+
+
+const profileBtn =
+document.getElementById("profileBtn");
+
+
+
+const profileMenu =
+document.getElementById("profileMenu");
+
+
+
+
+
+
+if(profileBtn){
+
+
+
+profileBtn.onclick=function(event){
+
+
+event.stopPropagation();
+
+
+
+profileMenu.classList.toggle("show");
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+document.addEventListener(
+"click",
+function(){
+
+
+if(profileMenu){
+
+
+profileMenu.classList.remove("show");
+
+
+}
+
+
+
+});
+
+
+
+
+
+
+
+
+
+// ==========================================
+// LOGOUT
+// ==========================================
+
+
+const logoutBtn =
+document.getElementById("logoutBtn");
+
+
+
+
+
+if(logoutBtn){
+
+
+
+logoutBtn.onclick=function(){
+
+
+
+window.location.href="login.html";
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+// ==========================================
+// CLOSE MODAL OUTSIDE
+// ==========================================
+
+
+window.onclick=function(event){
+
+
+
+let modal =
+document.getElementById("approveModal");
+
+
+
+
+if(event.target===modal){
+
+
+
+modal.classList.remove("show");
+
+
+
+}
+
+
+
+}
+
+// ==========================================
+// PAGE START
+// ==========================================
+
+
+renderEmergency();
+
+
+
+</script>
+
+
+</body>
+
+
+</html>

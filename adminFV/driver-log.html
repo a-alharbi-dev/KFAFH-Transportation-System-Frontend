@@ -1,0 +1,1306 @@
+<!-- Updated by Abrar Alharbi -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+
+Movement Officer - Driver Confirmation Log
+
+</title>
+
+<link href="css/style.css"
+      rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ==========================================
+                    HEADER
+========================================== -->
+
+<header class="app-header">
+
+    <div class="header-top">
+
+        <div class="container header-top-inner">
+
+            <span>
+
+                King Fahd Armed Forces Hospital in Jeddah
+
+            </span>
+
+            <span>
+
+                Transportation Management System
+
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="container header-main-inner">
+
+        <!-- Brand -->
+
+        <div class="brand">
+
+            <div class="brand-mark">
+
+                <img src="images/hospital-logo.png"
+                     alt="Hospital Logo"
+                     style="width:45px;height:45px;border-radius:12px;">
+
+            </div>
+
+            <div>
+
+                <h1 class="brand-title">
+
+                    Movement Officer
+
+                </h1>
+
+                <p class="brand-subtitle">
+
+                    Transportation Services Platform
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+
+        <nav class="main-nav">
+
+            <a href="movement-officer.html"
+               class="nav-link">
+
+                Trip Operation List
+
+            </a>
+
+            <a href="emergency-requests.html"
+               class="nav-link">
+
+                Emergency Requests
+
+            </a>
+
+            <a href="driver-log.html"
+               class="nav-link active">
+
+                Driver Confirmation Log
+
+            </a>
+
+        </nav>
+
+        <!-- Profile -->
+
+        <div class="header-actions">
+
+            <div class="profile-dropdown">
+
+                <button class="manager-chip"
+                        id="profileBtn">
+
+                    <span>
+
+                        MO
+
+                    </span>
+
+                    <div>
+
+                        <strong>
+
+                            Movement Officer
+
+                        </strong>
+
+                    </div>
+
+                </button>
+
+                <div class="profile-menu"
+                     id="profileMenu">
+
+                    <button class="menu-item"
+                            id="logoutBtn">
+
+                        Sign Out
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ==========================================
+                    MAIN
+========================================== -->
+
+<main>
+
+<section class="section">
+
+<div class="container">
+
+<div class="card">
+
+<div class="card-header">
+
+<div>
+
+<h2 class="card-title">
+
+Driver Confirmation Log
+
+</h2>
+
+<p class="section-subtitle">
+
+Monitor departure and arrival confirmations received from drivers.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="card-body">
+
+<!-- ==========================================
+                FILTERS
+========================================== -->
+
+<div class="toolbar-card">
+
+<input type="search"
+       class="input"
+       id="searchInput"
+       placeholder="Search Trip or Driver">
+
+<select class="select"
+        id="tripFilter">
+
+<option value="all">
+
+All Trips
+
+</option>
+
+<option value="TR-1001">
+
+TR-1001
+
+</option>
+
+<option value="TR-1002">
+
+TR-1002
+
+</option>
+
+<option value="TR-1003">
+
+TR-1003
+
+</option>
+
+<option value="TR-1004">
+
+TR-1004
+
+</option>
+
+</select>
+
+<select class="select"
+        id="driverFilter">
+
+<option value="all">
+
+All Drivers
+
+</option>
+
+<option value="Ahmed Ali">
+
+Ahmed Ali
+
+</option>
+
+<option value="Mohammed Saleh">
+
+Mohammed Saleh
+
+</option>
+
+<option value="Fahad Omar">
+
+Fahad Omar
+
+</option>
+
+<option value="Khaled Sami">
+
+Khaled Sami
+
+</option>
+
+</select>
+
+<select class="select"
+        id="typeFilter">
+
+<option value="all">
+
+All Confirmations
+
+</option>
+
+<option value="Departure">
+
+Departure
+
+</option>
+
+<option value="Arrival">
+
+Arrival
+
+</option>
+
+</select>
+
+<select class="select"
+        id="statusFilter">
+
+<option value="all">
+
+All Status
+
+</option>
+
+<option value="Confirmed">
+
+Confirmed
+
+</option>
+
+<option value="Pending">
+
+Pending
+
+</option>
+
+<option value="Missed">
+
+Missed
+
+</option>
+
+</select>
+
+</div>
+
+<!-- ==========================================
+                TABLE
+========================================== -->
+
+<div class="table-responsive">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+
+Log ID
+
+</th>
+
+<th>
+
+Trip
+
+</th>
+
+<th>
+
+Driver
+
+</th>
+
+<th>
+
+Vehicle
+
+</th>
+
+<th>
+
+Scheduled Time
+
+</th>
+
+<th>
+
+Confirmation Time
+
+</th>
+
+<th>
+
+Confirmation
+
+</th>
+
+<th>
+
+Status
+
+</th>
+
+<th>
+
+Action
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody id="confirmationTable">
+
+<!-- JavaScript -->
+
+</tbody>
+
+</table>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- ==========================================
+                    FOOTER
+========================================== -->
+
+<footer class="app-footer">
+
+<div class="container footer-inner">
+
+<div>
+
+<h2 class="footer-title">
+
+Armed Forces Hospital - Jeddah
+
+</h2>
+
+<p class="footer-text">
+
+A sustainable healthy community for Ministry of Defense personnel and their families.
+
+</p>
+
+<h2 class="footer-title"
+style="margin-top:15px;">
+
+Our Mission
+
+</h2>
+
+<p class="footer-text">
+
+Promoting healthy lifestyles and providing integrated preventive and curative healthcare services with professionalism and international quality standards.
+
+</p>
+
+</div>
+
+<div>
+
+<h2 class="footer-title">
+
+Transportation
+
+</h2>
+
+<ul class="footer-list">
+
+<li>
+
+Trip Operation List
+
+</li>
+
+<li>
+
+Emergency Requests
+
+</li>
+
+<li>
+
+Driver Confirmation Log
+
+</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h2 class="footer-title">
+
+Contact Us
+
+</h2>
+
+<ul class="footer-list">
+
+<li>
+
+Saudi Arabia - Jeddah
+
+</li>
+
+<li>
+
+Corniche Road
+
+</li>
+
+<li>
+
+Al Andalus
+
+</li>
+
+<li>
+
+23311
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<div class="container">
+
+© 2026 Armed Forces Hospital - Jeddah.
+All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- ==========================================
+        CONFIRMATION DETAILS MODAL
+========================================== -->
+
+<div class="modal"
+     id="detailsModal">
+
+<div class="modal-dialog">
+
+<div class="modal-header">
+
+<h3 class="modal-title">
+
+Driver Confirmation Details
+
+</h3>
+
+<button class="close-btn"
+        onclick="closeModal()">
+
+×
+
+</button>
+
+</div>
+
+<div class="modal-body">
+
+<p>
+
+<strong>Log ID:</strong>
+
+<span id="detailLogId"></span>
+
+</p>
+
+<p>
+
+<strong>Trip:</strong>
+
+<span id="detailTrip"></span>
+
+</p>
+
+<p>
+
+<strong>Driver:</strong>
+
+<span id="detailDriver"></span>
+
+</p>
+
+<p>
+
+<strong>Vehicle:</strong>
+
+<span id="detailVehicle"></span>
+
+</p>
+
+<p>
+
+<strong>Confirmation:</strong>
+
+<span id="detailType"></span>
+
+</p>
+
+<p>
+
+<strong>Scheduled Time:</strong>
+
+<span id="detailScheduled"></span>
+
+</p>
+
+<p>
+
+<strong>Confirmation Time:</strong>
+
+<span id="detailConfirmed"></span>
+
+</p>
+
+<p>
+
+<strong>Status:</strong>
+
+<span id="detailStatus"></span>
+
+</p>
+
+</div>
+
+<div class="modal-footer">
+
+<button class="btn btn-secondary"
+        onclick="closeModal()">
+
+Close
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+                MESSAGE BOX
+========================================== -->
+
+<div id="messageBox"
+     class="message-box">
+
+</div>
+
+<script>
+
+// ==========================================
+// CONFIRMATION DATA
+// ==========================================
+
+let confirmations=[
+
+{
+
+id:"LOG-001",
+
+trip:"TR-1001",
+
+driver:"Ahmed Ali",
+
+vehicle:"BUS-101",
+
+scheduled:"07:00",
+
+confirmed:"07:01",
+
+type:"Departure",
+
+status:"Confirmed"
+
+},
+
+{
+
+id:"LOG-002",
+
+trip:"TR-1001",
+
+driver:"Ahmed Ali",
+
+vehicle:"BUS-101",
+
+scheduled:"07:30",
+
+confirmed:"07:31",
+
+type:"Arrival",
+
+status:"Confirmed"
+
+},
+
+{
+
+id:"LOG-003",
+
+trip:"TR-1002",
+
+driver:"Mohammed Saleh",
+
+vehicle:"BUS-102",
+
+scheduled:"08:00",
+
+confirmed:"--",
+
+type:"Departure",
+
+status:"Pending"
+
+},
+
+{
+
+id:"LOG-004",
+
+trip:"TR-1003",
+
+driver:"Fahad Omar",
+
+vehicle:"BUS-103",
+
+scheduled:"15:00",
+
+confirmed:"15:03",
+
+type:"Departure",
+
+status:"Confirmed"
+
+},
+
+{
+
+id:"LOG-005",
+
+trip:"TR-1003",
+
+driver:"Fahad Omar",
+
+vehicle:"BUS-103",
+
+scheduled:"15:45",
+
+confirmed:"--",
+
+type:"Arrival",
+
+status:"Pending"
+
+},
+
+{
+
+id:"LOG-006",
+
+trip:"TR-1004",
+
+driver:"Khaled Sami",
+
+vehicle:"BUS-104",
+
+scheduled:"22:00",
+
+confirmed:"22:07",
+
+type:"Departure",
+
+status:"Confirmed"
+
+}
+
+];
+
+let selectedConfirmation=null;
+// ==========================================
+// MESSAGE BOX
+// ==========================================
+
+function showMessage(message,type="success"){
+
+const box=document.getElementById("messageBox");
+
+box.className="message-box";
+
+if(type==="error"){
+
+box.classList.add("error");
+
+}
+
+box.innerHTML=message;
+
+box.classList.add("show");
+
+clearTimeout(box.timer);
+
+box.timer=setTimeout(function(){
+
+box.classList.remove("show");
+
+},3000);
+
+}
+
+
+
+// ==========================================
+// RENDER TABLE
+// ==========================================
+
+function renderTable(){
+
+const body=document.getElementById("confirmationTable");
+
+body.innerHTML="";
+
+let keyword=document.getElementById("searchInput").value.toLowerCase();
+
+let trip=document.getElementById("tripFilter").value;
+
+let driver=document.getElementById("driverFilter").value;
+
+let type=document.getElementById("typeFilter").value;
+
+let status=document.getElementById("statusFilter").value;
+
+
+
+let filtered=confirmations.filter(function(item){
+
+let text=(
+
+item.id+
+
+item.trip+
+
+item.driver+
+
+item.vehicle+
+
+item.type
+
+).toLowerCase();
+
+
+
+let matchSearch=text.includes(keyword);
+
+let matchTrip=trip==="all"||item.trip===trip;
+
+let matchDriver=driver==="all"||item.driver===driver;
+
+let matchType=type==="all"||item.type===type;
+
+let matchStatus=status==="all"||item.status===status;
+
+
+
+return matchSearch&&
+
+matchTrip&&
+
+matchDriver&&
+
+matchType&&
+
+matchStatus;
+
+});
+
+
+
+filtered.forEach(function(item){
+
+let row=document.createElement("tr");
+
+
+
+let statusBadge="";
+
+
+
+if(item.status==="Confirmed"){
+
+statusBadge='<span class="badge badge-success">Confirmed</span>';
+
+}
+
+else if(item.status==="Pending"){
+
+statusBadge='<span class="badge badge-warning">Pending</span>';
+
+}
+
+else{
+
+statusBadge='<span class="badge badge-danger">Missed</span>';
+
+}
+
+
+
+let typeBadge=
+
+
+
+item.type==="Departure"
+
+?
+
+'<span class="badge badge-primary">Departure</span>'
+
+:
+
+'<span class="badge badge-success">Arrival</span>';
+
+
+
+row.innerHTML=`
+
+<td>
+
+${item.id}
+
+</td>
+
+<td>
+
+${item.trip}
+
+</td>
+
+<td>
+
+${item.driver}
+
+</td>
+
+<td>
+
+${item.vehicle}
+
+</td>
+
+<td>
+
+${item.scheduled}
+
+</td>
+
+<td>
+
+${item.confirmed}
+
+</td>
+
+<td>
+
+${typeBadge}
+
+</td>
+
+<td>
+
+${statusBadge}
+
+</td>
+
+<td>
+
+<button
+
+class="btn btn-secondary"
+
+onclick="viewConfirmation('${item.id}')">
+
+View
+
+</button>
+
+</td>
+
+`;
+
+
+
+body.appendChild(row);
+
+});
+
+}
+
+
+
+// ==========================================
+// SEARCH
+// ==========================================
+
+document
+
+.getElementById("searchInput")
+
+.addEventListener("input",renderTable);
+
+
+
+// ==========================================
+// FILTERS
+// ==========================================
+
+document
+
+.getElementById("tripFilter")
+
+.addEventListener("change",renderTable);
+
+
+
+document
+
+.getElementById("driverFilter")
+
+.addEventListener("change",renderTable);
+
+
+
+document
+
+.getElementById("typeFilter")
+
+.addEventListener("change",renderTable);
+
+
+
+document
+
+.getElementById("statusFilter")
+
+.addEventListener("change",renderTable);
+// ==========================================
+// VIEW CONFIRMATION DETAILS
+// ==========================================
+
+function viewConfirmation(id){
+
+    selectedConfirmation=confirmations.find(function(item){
+
+        return item.id===id;
+
+    });
+
+    if(!selectedConfirmation){
+
+        return;
+
+    }
+
+    document.getElementById("detailLogId").innerHTML=
+
+        selectedConfirmation.id;
+
+    document.getElementById("detailTrip").innerHTML=
+
+        selectedConfirmation.trip;
+
+    document.getElementById("detailDriver").innerHTML=
+
+        selectedConfirmation.driver;
+
+    document.getElementById("detailVehicle").innerHTML=
+
+        selectedConfirmation.vehicle;
+
+    document.getElementById("detailType").innerHTML=
+
+        selectedConfirmation.type;
+
+    document.getElementById("detailScheduled").innerHTML=
+
+        selectedConfirmation.scheduled;
+
+    document.getElementById("detailConfirmed").innerHTML=
+
+        selectedConfirmation.confirmed;
+
+    document.getElementById("detailStatus").innerHTML=
+
+        selectedConfirmation.status;
+
+    document
+
+    .getElementById("detailsModal")
+
+    .classList.add("show");
+
+}
+
+
+
+// ==========================================
+// CLOSE MODAL
+// ==========================================
+
+function closeModal(){
+
+    document
+
+    .getElementById("detailsModal")
+
+    .classList.remove("show");
+
+}
+
+
+
+// ==========================================
+// CLOSE MODAL WHEN CLICKING OUTSIDE
+// ==========================================
+
+window.onclick=function(event){
+
+    let modal=document.getElementById("detailsModal");
+
+    if(event.target===modal){
+
+        closeModal();
+
+    }
+
+};
+
+
+
+// ==========================================
+// PROFILE MENU
+// ==========================================
+
+const profileBtn=document.getElementById("profileBtn");
+
+const profileMenu=document.getElementById("profileMenu");
+
+if(profileBtn){
+
+    profileBtn.addEventListener("click",function(event){
+
+        event.stopPropagation();
+
+        profileMenu.classList.toggle("show");
+
+    });
+
+}
+
+
+
+document.addEventListener("click",function(){
+
+    if(profileMenu){
+
+        profileMenu.classList.remove("show");
+
+    }
+
+});
+
+
+
+// ==========================================
+// LOGOUT
+// ==========================================
+
+const logoutBtn=document.getElementById("logoutBtn");
+
+if(logoutBtn){
+
+    logoutBtn.addEventListener("click",function(){
+
+        window.location.href="login.html";
+
+    });
+
+}
+// ==========================================
+// UPDATE DASHBOARD CARDS
+// ==========================================
+
+function updateDashboard(){
+
+    document.getElementById("totalTrips").innerHTML=
+
+        confirmations.length;
+
+
+
+    let departure=0;
+
+    let arrival=0;
+
+    let pending=0;
+
+
+
+    confirmations.forEach(function(item){
+
+        if(item.type==="Departure" && item.status==="Confirmed"){
+
+            departure++;
+
+        }
+
+
+
+        if(item.type==="Arrival" && item.status==="Confirmed"){
+
+            arrival++;
+
+        }
+
+
+
+        if(item.status==="Pending"){
+
+            pending++;
+
+        }
+
+    });
+
+
+
+    document.getElementById("departureCount").innerHTML=
+
+        departure;
+
+
+
+    document.getElementById("arrivalCount").innerHTML=
+
+        arrival;
+
+
+
+    document.getElementById("pendingCount").innerHTML=
+
+        pending;
+
+}
+
+
+
+// ==========================================
+// ESC KEY CLOSE MODAL
+// ==========================================
+
+document.addEventListener("keydown",function(event){
+
+    if(event.key==="Escape"){
+
+        closeModal();
+
+    }
+
+});
+
+
+
+// ==========================================
+// PAGE LOAD
+// ==========================================
+
+document.addEventListener("DOMContentLoaded",function(){
+
+    renderTable();
+
+    updateDashboard();
+
+});
+
+
+
+// ==========================================
+// END SCRIPT
+// ==========================================
+
+</script>
+
+</body>
+
+</html>
